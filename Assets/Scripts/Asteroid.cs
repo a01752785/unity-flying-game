@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Asteroid : MonoBehaviour
 {
-    [SerializeField] private float velocityXFactor = -5;
+    [SerializeField] private float velocityXFactor;
 
     // Start is called before the first frame update
     void Start()
     {
+        velocityXFactor = Random.Range(-10, 10);
         GetComponent<Rigidbody2D>().velocity = new Vector2(velocityXFactor, 0);
     }
 
